@@ -1,6 +1,6 @@
 import { Button } from "antd";
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 import logo2 from "../../assets/images/logo.svg";
 
@@ -45,6 +45,9 @@ const Header = () => {
       });
     }, 1000);
   };
+  const { isAuthenticated } = useContext(AuthContext);
+  const location = useLocation();
+  const isMyPostsPage = location.pathname === "/my-posts";
 
   return (
     <header className="header">
@@ -75,14 +78,20 @@ const Header = () => {
               </NavLink>
             </li>
             <div className="login">
-              <Link to={AuthContext ? "/login" : "/account"}>
+              <Link to={isAuthenticated ? "/account" : "/login"}>
                 <Button
                   className="loginbtn"
                   style={{ width: "110px", height: "45px" }}
                   loading={loadings[1]}
                   onClick={() => enterLoading(1)}
                 >
-                  {AuthContext ? "Account" : "Login"}
+                  {isAuthenticated === undefined
+                    ? "Login"
+                    : isAuthenticated
+                    ? "Account"
+                    : isMyPostsPage
+                    ? "Account"
+                    : "Login"}
                 </Button>
               </Link>
             </div>

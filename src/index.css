@@ -368,7 +368,8 @@ main {
   padding: 0 !important;
 }
 
-.box-right, .box-myPost .p-4 {
+.box-right,
+.box-myPost .p-4 {
   font-size: 20px;
   padding: 0 !important;
 }
@@ -380,7 +381,6 @@ main {
 .box-right .p-5 {
   color: #6d6e76;
 }
-
 
 /*about page static */
 
@@ -488,10 +488,47 @@ p {
   .home-right > img {
     width: 100%;
   }
+  .box-posts img {
+    width: 100%;
+  }
+  .box-myPost {
+    display: flex;
+    justify-content: center !important;
+    text-align: center;
+  }
+}
+
+.account-txt {
+  text-align: center;
+  padding: 50px 0px 50px;
+}
+
+.row-account {
+  display: flex;
+  justify-content: center !important;
+}
+
+.row-account {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.row-account input {
+  padding: 10px 20px;
+}
+
+.row-password {
+  width: 400px;
+}
+
+.row-password input {
+  padding: 10px 20px;
 }
 
 @media (max-width: 1065px) {
-  .box {
+  .box,
+  .box-posts,
+  .box-myPost {
     display: grid;
     grid-template-columns: auto;
   }
