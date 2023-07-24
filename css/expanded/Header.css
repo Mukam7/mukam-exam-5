@@ -1,0 +1,152 @@
+.header {
+  width: 100%;
+  background: var(--black, #232536);
+  box-shadow: 0px 4px 32px 0px rgba(0, 16, 61, 0.16);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.app {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.app {
+  border-radius: 5px;
+}
+
+.btn-dark {
+  padding: 10px 18px;
+  background-color: transparent;
+  color: var(--color-text, #2c2d2e);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.5s;
+  font-weight: 500;
+  line-height: 24px;
+  padding-right: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+}
+.btn-dark:hover {
+  color: #ef7c00;
+}
+
+body.dark {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.header__dark-mode {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.header__dark-mode span {
+  font-size: 16px;
+  transition: 0.5s;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+}
+
+.nav__link {
+  color: var(--light, #fff);
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.nav__link:hover {
+  color: #ef7c00;
+}
+
+.nav__brand {
+  text-transform: uppercase;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.nav__toggler {
+  display: none;
+}
+
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: white;
+  transition: 0.3s ease-in;
+}
+
+.login button {
+  padding: 10px 32px;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.login button:hover {
+  color: #ef7c00;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    height: 93vh;
+    width: 50vw;
+    background: var(--black, #232536);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+  .nav__menu .nav__link {
+    padding: 10px;
+  }
+}
+/* Active Class */
+.nav__active {
+  transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+  background-color: white;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+  background-color: white;
+}

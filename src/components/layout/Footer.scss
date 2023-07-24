@@ -1,0 +1,36 @@
+.footers {
+  background-color: #232536;
+  // position: fixed;
+  // width: 100%;
+  // bottom: 0;
+}
+
+footer {
+  height: 164px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+footer {
+  .row {
+    width: 100%;
+   
+  }
+}
+
+footer .row .title a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .row .title {
+  font-weight: bold;
+  color: white;
+}
+
+@media screen and (max-width: 670px) {
+  footer .row .title {
+    width: 100%;
+  }
+}
