@@ -67,9 +67,9 @@ const MyPostsP = () => {
                     </div>
                     <div className="box-right-posts">
                       <Link to={`/posts/${post._id}`} state={{ post }}>
-                        <p className="p-4">{post.title.slice(0, 15)}</p>
-                        <h3>{post.title.slice(0, 15)}</h3>
-                        <p className="p-5">{post.description.slice(0, 15)}</p>
+                        <p className="p-4">{post.title}</p>
+                        <h3>{post.title}</h3>
+                        <p className="p-5">{post.description.slice(0, 50)}</p>
                       </Link>
                     </div>
                   </div>

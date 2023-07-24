@@ -380,20 +380,22 @@ const MyPostsP = () => {
               {currentPosts.map((post, i) => (
                 <div key={i}>
                   <div className="container">
-                    <div className="box">
-                      <div className="box-left-3">
-                        <img
-                          src={
-                            "https://mir-s3-cdn-cf.behance.net/user/276/94bec534419777.5d1cd5aa6d787.png"
-                          }
-                          alt="img"
-                        />
+                    <div className="box-myPost">
+                      <div className="box-left-myPost">
+                        <Link to={`/posts/${post._id}`} state={{ post }}>
+                          <img
+                            src={
+                              "https://mir-s3-cdn-cf.behance.net/user/276/94bec534419777.5d1cd5aa6d787.png"
+                            }
+                            alt="img"
+                          />
+                        </Link>
                       </div>
-                      <div className="box-right">
+                      <div className="box-right-myPost">
                         <Link to={`/posts/${post._id}`} state={{ post }}>
                           <p className="p-4">{post.title}</p>
                           <h3>{post.title}</h3>
-                          <p className="p-5">{post.description}</p>
+                          <p className="p-5">{post.description.slice(0, 100)}</p>
                         </Link>
                       </div>
                     </div>

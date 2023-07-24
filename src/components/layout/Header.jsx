@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo2 from "../../assets/images/logo.svg";
 
 import "./Header.scss";
+import { AuthContext } from "../../context/AuthContext";
 
 const Header = () => {
   const [active, setActive] = useState("nav__menu");
@@ -44,6 +45,7 @@ const Header = () => {
       });
     }, 1000);
   };
+
   return (
     <header className="header">
       <div className="container">
@@ -73,15 +75,14 @@ const Header = () => {
               </NavLink>
             </li>
             <div className="login">
-              <Link to="/login">
+              <Link to={AuthContext ? "/login" : "/account"}>
                 <Button
                   className="loginbtn"
                   style={{ width: "110px", height: "45px" }}
-                  // type="primary"
                   loading={loadings[1]}
                   onClick={() => enterLoading(1)}
                 >
-                  Login
+                  {AuthContext ? "Account" : "Login"}
                 </Button>
               </Link>
             </div>

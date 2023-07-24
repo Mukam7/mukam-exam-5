@@ -349,7 +349,8 @@ main {
 }
 
 .box,
-.box-posts {
+.box-posts,
+.box-myPost {
   display: flex;
   justify-content: space-between !important;
   align-items: center;
@@ -367,8 +368,9 @@ main {
   padding: 0 !important;
 }
 
-.box-right .p-4 {
+.box-right, .box-myPost .p-4 {
   font-size: 20px;
+  padding: 0 !important;
 }
 
 .box-right h1 {
@@ -378,6 +380,7 @@ main {
 .box-right .p-5 {
   color: #6d6e76;
 }
+
 
 /*about page static */
 

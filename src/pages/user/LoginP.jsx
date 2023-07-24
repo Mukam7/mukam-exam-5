@@ -1,7 +1,3 @@
-
-
-
-
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
@@ -10,7 +6,6 @@ import Cookies from "js-cookie";
 import { EXPIRE_DATE, ROLE, TOKEN } from "../../const";
 import { request } from "../../server/request";
 import { Spin } from "antd";
-
 
 const LoginP = () => {
   const navigate = useNavigate();
@@ -49,7 +44,8 @@ const LoginP = () => {
         <section className="loginpage">
           <h1>Login</h1>
           {loading ? (
-            <Spin size="large" 
+            <Spin
+              size="large"
               style={{
                 fontSize: "50px",
                 color: "blue",
@@ -65,8 +61,7 @@ const LoginP = () => {
                 placeholder="Username"
                 name="username"
               />
-           
-   
+
               <input
                 type="text"
                 onChange={handleChange}
@@ -74,7 +69,7 @@ const LoginP = () => {
                 placeholder="Password"
                 name="password"
               />
-             
+
               <button className="button" type="submit">
                 Login
               </button>
