@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 import Slider from "react-slick";
 import { request } from "../../server/request";
 import { Link } from "react-router-dom";
+import { IMG_URL } from "../../const";
 
 const HomeP = () => {
   const [posts, setPosts] = useState([]);
@@ -142,7 +143,7 @@ const HomeP = () => {
           {posts.map((pr) => (
             <div key={pr}>
               <Card style={{ width: "18rem" }} className="line-clamp">
-                <Image src="https://uploads-ssl.webflow.com/5cc19611198b8d7bdfc5fcfb/5cdffa66e7b579ef71ab3204_webflow-FEATURED-gif.gif" />
+                <Image src={ IMG_URL + pr.photo._id + "." + pr.photo.name.split(".")[1] } />
                 <Card.Body>
                   <p>{pr.updatedAt.split("T")[0]}</p>
                   <Card.Title>{pr.title}</Card.Title>
