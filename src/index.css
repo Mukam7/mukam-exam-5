@@ -384,6 +384,12 @@ main {
   padding: 0 !important;
 }
 
+.box-right-posts, .box-right-myPost {
+  text-align: center !important;
+  margin-right: 250px !important;
+  margin: 0 auto !important;
+}
+
 .box-right h1 {
   color: black;
 }

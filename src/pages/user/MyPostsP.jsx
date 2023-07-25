@@ -199,7 +199,7 @@ const MyPostsP = () => {
                           <p className="p-4">{post.title}</p>
                           <h3>{post.title}</h3>
                           <p className="p-5">
-                            {post.description.slice(0, 100)}
+                            {post.description}
                           </p>
                         </Link>
                       </div>
